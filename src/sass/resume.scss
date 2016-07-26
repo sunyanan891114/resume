@@ -1,0 +1,272 @@
+$btn-border-color: #FFF;
+$students-bg-color: #91d0b1;
+$prospective-tutors-bg-color: #ffcd62;
+$partners-bg-color: #80a8cc;
+$link-font-color: #f16868;
+
+$main-font-color: #FFF;
+$header-font-color: #525252;
+$main-font-family: 'Just Another Hand', cursive;
+$header-font-family: Montserrat,Oxygen,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+
+@mixin opacity-filter($opacity) {
+  -khtml-opacity: $opacity;
+  -moz-opacity: $opacity;
+  -ms-filter: "alpha(opacity=70)";
+  filter: alpha(opacity=70);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=$opacity);
+  opacity: $opacity;
+}
+
+body {
+  font-family: Avenir, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  min-width: 970px;
+  text-align: center;
+}
+
+button {
+  padding: 1rem 2rem;
+  background: transparent;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 400;
+}
+
+h2, h1 {
+  margin: 0;
+  font-family: $main-font-family;
+  font-size: 50px;
+  font-weight: 100;
+  color: $header-font-color;
+}
+
+a {
+  text-decoration: none;
+  color: $link-font-color;
+  transition: all 1s;
+}
+
+a:hover {
+  color: darken($link-font-color, 30%)
+}
+
+.learn-more-btn {
+  color: $main-font-color;
+  font-weight: 600;
+  border: 2px solid $btn-border-color;
+  transition: all .3s ease-in-out;
+  margin-top: 10px;
+}
+
+.learn-more-btn:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.big-section {
+  height: 95vh;
+  padding: 4.21875rem 10rem;
+}
+
+.middle-section {
+  height: 80vh;
+  color: #FFFFFF;
+  padding: 4.21875rem 10rem;
+}
+
+.small-section {
+  height: 65vh;
+}
+
+.clear-fix:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.section-heading-has-separator {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-heading-has-separator:after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -128.5px;
+  background-image: url('images/spritesheet.png');
+  width: 257px;
+  height: 17px;
+}
+
+.heading-separator {
+  position: relative;
+  padding-bottom: 10px;
+  margin: 0 0 1.875rem;
+  color: #333;
+  font-family: $header-font-family;
+  text-align: center;
+  text-transform: uppercase;
+}
+.heading-separator:after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -40px;
+  height: 0;
+  width: 80px;
+  content: " ";
+  border-bottom: 3px solid #B1B1B1;
+}
+
+header {
+  text-align: center;
+  font-size: .75em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(4,4,2,.25);
+  z-index: 1000;
+  padding: 0 10rem;
+  .icon {
+    display: inline-block;
+    width: 33.33%;
+    vertical-align: middle;
+  }
+  .nav {
+    display: inline-block;
+    line-height: 6em;
+    margin: 0 20px;
+    a {
+      display: inline-block;
+      text-decoration: none;
+      margin-left: 20px;
+      color: $main-font-color;
+      font-size: 1.25em;
+      font-weight: 200;
+      transition: all 1s;
+    }
+    a:hover {
+      color: $link-font-color;
+    }
+    :last-child {
+      margin-right: 20px;
+    }
+  }
+  .contact-btn {
+    display: inline-block;
+    color: $main-font-color;
+    font-weight: 600;
+    padding: .7em 3.5em;
+    border: 2px solid $btn-border-color;
+    transition: all 1s;
+  }
+  .contact-btn:hover {
+    color: $link-font-color;
+    border: 2px solid $link-font-color;
+  }
+}
+
+.introduction {
+  background: url('images/intro_bg.jpg');
+  background-size: cover;
+  @include opacity-filter(.7);
+  color: $main-font-color;
+  h2, h1 {
+    color: $main-font-color;
+  }
+  .photo {
+    border-radius: 50%;
+    margin: 0 auto;
+    background: url("images/intro_bg.jpg");
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.awesome-at {
+  padding: 4.21875rem 10rem;
+  .awesome-item {
+    width: 30%;
+    margin-right: 2%;
+    display: inline-block;
+    &:last-child {
+      margin-left: 0;
+    }
+    &__logo {
+      height: 220px;
+      width: 220px;
+      font-size: 140px;
+      line-height: 220px;
+      color: $link-font-color;
+    }
+  }
+}
+
+.skills {
+  background: url("images/skills_bg.jpg") no-repeat;
+  background-size: cover;
+  @include opacity-filter(.9);
+  h2 {
+    color: $main-font-color;
+  }
+}
+
+.projects {
+  padding: 4.21875rem 10rem;
+  h2 {
+    margin-bottom: 30px;
+  }
+  .project-item {
+    h3 {
+      color: $link-font-color;
+    }
+    .heading-separator:after {
+      border-bottom: 3px solid $link-font-color;
+    }
+    width: 30%;
+    margin-right: 2%;
+    display: inline-block;
+    &:last-child {
+      margin-left: 0;
+    }
+    &__content {
+      margin-bottom: 30px;
+    }
+    &__link {
+      font-size: 1.25em;
+    }
+  }
+}
+
+.footer {
+  padding: 0px 10rem;
+  background: #efefef;
+  .footer-content {
+    float: left;
+    font-size: .85em;
+    padding: 30px 0;
+    color: $header-font-color;
+    margin-bottom: 0;
+  }
+  .social-links {
+    float: right;
+    padding: 18px 0;
+    letter-spacing: .2em;
+    i {
+      font-size: 2.25em;
+    }
+  }
+}
+
