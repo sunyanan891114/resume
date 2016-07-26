@@ -1,0 +1,70 @@
+html {
+  background: #FFFFFF; }
+
+body {
+  margin: 50px auto;
+  max-width: 980px;
+  min-width: 800px;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 200; }
+
+.clear-fix {
+  content: "";
+  clear: both;
+  display: block; }
+
+.content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center; }
+
+.big-section {
+  height: 100vh; }
+
+.introduction__aside {
+  float: left;
+  width: 30%;
+  margin-right: 2%;
+  text-align: center; }
+  .introduction__aside .photo {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: url("./images/avartar.jpg") no-repeat center;
+    background-size: cover; }
+  .introduction__aside h1 {
+    font-size: 2.25em;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 0;
+    font-weight: 700; }
+  .introduction__aside h2 {
+    font-size: 1.5em;
+    font-family: "Roboto", sans-serif;
+    color: #ABACAC;
+    margin-top: 0; }
+  .introduction__aside .description {
+    text-align: left; }
+
+.introduction__content {
+  float: right;
+  width: 68%; }
+  .introduction__content .interaction {
+    position: relative; }
+    .introduction__content .interaction__item {
+      float: left;
+      width: 50%;
+      margin-bottom: 2%; }
+      .introduction__content .interaction__item .item-icon {
+        font-size: 1.5em;
+        vertical-align: middle; }
+      .introduction__content .interaction__item .item-container {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px; }
+        .introduction__content .interaction__item .item-container p {
+          margin: 0; }
+        .introduction__content .interaction__item .item-container .item-name {
+          color: #0088FF;
+          font-family: "Roboto", sans-serif; }
